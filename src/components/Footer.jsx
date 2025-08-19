@@ -3,8 +3,16 @@ import { motion } from "framer-motion";
 import { FaDiscord, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const contacts = [
-  { name: "Discord", icon: <FaDiscord />, link: "https://discord.com/users/dinesh.bk" },
-  { name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com/in/imdineshbk" },
+  {
+    name: "Discord",
+    icon: <FaDiscord />,
+    link: "https://discord.com/users/dinesh.bk",
+  },
+  {
+    name: "LinkedIn",
+    icon: <FaLinkedin />,
+    link: "https://linkedin.com/in/imdineshbk",
+  },
   { name: "GitHub", icon: <FaGithub />, link: "https://github.com/D-moc" },
   { name: "X", icon: <FaTwitter />, link: "https://x.com/imdineshbk" },
 ];
@@ -24,11 +32,12 @@ const Footer = () => {
                  text-gray-300 py-12 px-6 relative overflow-hidden"
     >
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-
         {/* Shiny Bluish Blurry Line */}
-        <div className="w-full max-w-4xl h-[2px] mb-10 rounded-full 
+        <div
+          className="w-full max-w-4xl h-[2px] mb-10 rounded-full 
                         bg-gradient-to-r from-transparent via-cyan-400 to-transparent 
-                        blur-[2px] shadow-[0_0_15px_rgba(56,189,248,0.5)]"></div>
+                        blur-[2px] shadow-[0_0_15px_rgba(56,189,248,0.5)]"
+        ></div>
 
         {/* Social Links */}
         <div className="flex justify-center gap-6 mb-6">
@@ -61,9 +70,10 @@ const Footer = () => {
         </div>
 
         {/* Footer Text */}
-        <p className="text-center text-sm text-gray-400 font-normal">
-         © {new Date().getFullYear()}{" "}
-          <span className="text-400 font-bold">Dinesh Bishokarma. </span>All rights reserved.
+        <p className="text-center text-sm text-gray-400">
+          Made with <span className="text-red-500">❤️</span> by{" "}
+          <span className="font-semibold text-white">Dinesh Bishokarma</span> ©{" "}
+          {new Date().getFullYear()}
         </p>
       </div>
     </footer>
