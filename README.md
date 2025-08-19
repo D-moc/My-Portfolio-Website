@@ -1,20 +1,31 @@
-  [View My Portfolio Website](https://portfolio-virid-five-o7m0ubek71.vercel.app/)
+# 🌐 [My Portfolio Website](https://portfolio-virid-five-o7m0ubek71.vercel.app/)
 
-
-## Tech Stack  
-
-- ⚛**React.js** – component-based UI framework  
-- **Tailwind CSS** – modern utility-first styling  
-- **Framer Motion** – animations and transitions  
-- **React Icons** – for social and UI icons  
+Welcome! This is my personal portfolio website, showcasing my projects, skills, and experience. Built with modern web technologies to provide a smooth and interactive user experience.  
 
 ---
 
-## ⚙️ Setup Locally 
+## 🚀 Tech Stack  
 
-Run this project locally with:  
+- ⚛ **React.js** – Component-based UI framework for building interactive interfaces  
+- 🎨 **Tailwind CSS** – Utility-first CSS framework for responsive and modern styling  
+- ✨ **Framer Motion** – Smooth animations and transitions for an engaging experience  
+- 🛠 **React Icons** – Easy-to-use icons for social links and UI elements  
+
+---
+
+## ⚙️ Getting Started  
+
+Follow these steps to run the project locally:  
 
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/D-moc/portfolio.git
 
+# 2. Navigate to the project directory
+cd portfolio
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
