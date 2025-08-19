@@ -1,12 +1,51 @@
-# React + Vite
+# 🌐 Portfolio Website  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **portfolio website** built with **React + Vite, Tailwind CSS, and React Libraries**, designed to showcase my journey as a frontend developer aspiring to become a full-stack engineer.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features  
 
-## Expanding the ESLint configuration
+- 👨‍🎓 **Education Section** – overview of my academic background  
+- 👨‍💻 **About Me** – professional introduction and career aspirations  
+- 🛠️ **Skills** – collection of my technical expertise and tools I use  
+- 💼 **Experience** – roles and responsibilities in organizations I’ve worked with  
+- 📂 **Projects Showcase** – highlights of the projects I’ve built  
+- 🔗 **Social Links** – quick access to my GitHub, LinkedIn, Discord, and X (Twitter)  
+- 🎨 **Modern UI/UX** – responsive design with smooth animations  
+- ⚡ **Performance Focused** – optimized for fast loading and clean structure  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack  
+
+- ⚛️ **React.js** – component-based UI framework  
+- 🎨 **Tailwind CSS** – modern utility-first styling  
+- 🎞️ **Framer Motion** – animations and transitions  
+- 📦 **React Icons** – for social and UI icons  
+
+---
+
+## 📂 Folder Structure  
+
+portfolio/
+├── public/ # Static assets
+├── src/
+│ ├── assets/ # Images and icons
+│ ├── components/ # Reusable UI components
+│ ├── sections/ # About, Skills, Education, Projects, Experience, Footer, etc.
+│ ├── App.jsx # Main App component
+│ └── index.js # Entry point
+└── package.json
+
+
+---
+
+## ⚙️ Installation & Setup  
+
+Run this project locally with:  
+
+```bash
+# Clone the repository
+git clone https://github.com/D-moc/portfolio.git
+
