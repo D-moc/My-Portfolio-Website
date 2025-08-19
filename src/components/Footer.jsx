@@ -62,8 +62,8 @@ const Footer = () => {
 
         {/* Footer Text */}
         <p className="text-center text-sm text-gray-400 font-normal">
-         
-          <span className="text-400 font-bold"> © {new Date().getFullYear()}{" "} Dinesh Bishokarma. All rights reserved.</span>
+         © {new Date().getFullYear()}{" "}
+          <span className="text-400 font-bold">Dinesh Bishokarma. </span>All rights reserved.
         </p>
       </div>
     </footer>
