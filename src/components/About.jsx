@@ -1,6 +1,5 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import Tilt from "react-parallax-tilt";
 import profileIcon from "../assets/image.jpg";
 import resumeFile from "../assets/resume.pdf";
 
@@ -51,32 +50,25 @@ function About() {
         </a>
       </div>
 
-      {/* Right Side - Profile Image with Glow + Tilt */}
+      {/* Right Side - Profile Image with Glow + Animation */}
       <div className="flex-shrink-0 flex justify-center md:justify-end relative">
         {/* Blurry glow behind image */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div
-            className="w-64 h-64 md:w-80 md:h-80 rounded-full 
+            className="w-72 h-72 md:w-96 md:h-96 rounded-full 
                  bg-amber-500/30 blur-3xl animate-pulse"
           ></div>
         </div>
 
-        <Tilt
-          tiltMaxAngleX={20}
-          tiltMaxAngleY={20}
-          perspective={1000}
-          scale={1.05}
-          transitionSpeed={1000}
-          gyroscope={true}
-          className="rounded-full relative z-10"
-        >
+        {/* Animated Image */}
+        <div className="relative z-10 animate-bounce-slow">
           <img
             src={profileIcon}
             alt="Profile"
-            className="w-56 h-56 md:w-72 md:h-72 rounded-full shadow-lg object-cover 
+            className="w-72 h-72 md:w-96 md:h-96 rounded-full shadow-lg object-cover 
                  border-4 border-amber-500 drop-shadow-[0_10px_20px_rgba(251,191,36,0.5)]"
           />
-        </Tilt>
+        </div>
       </div>
     </section>
   );
