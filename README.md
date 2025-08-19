@@ -13,9 +13,8 @@ Welcome! This is my personal portfolio website, showcasing my projects, skills, 
 
 ---
 
-## ⚙️ Getting Started  
-
-Follow these steps to run the project locally:  
+## ⚙️ Follow these steps to run the project locally:  
+ 
 
 ```bash
 # 1. Clone the repository
