@@ -1,12 +1,12 @@
- 👉 [View My Portfolio Website](https://portfolio-virid-five-o7m0ubek71.vercel.app/)
+  [View My Portfolio Website](https://portfolio-virid-five-o7m0ubek71.vercel.app/)
 
 
-## 🛠️ Tech Stack  
+## Tech Stack  
 
-- ⚛️ **React.js** – component-based UI framework  
-- 🎨 **Tailwind CSS** – modern utility-first styling  
-- 🎞️ **Framer Motion** – animations and transitions  
-- 📦 **React Icons** – for social and UI icons  
+- ⚛**React.js** – component-based UI framework  
+- **Tailwind CSS** – modern utility-first styling  
+- **Framer Motion** – animations and transitions  
+- **React Icons** – for social and UI icons  
 
 ---
 
