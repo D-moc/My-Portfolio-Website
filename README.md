@@ -26,22 +26,7 @@ A modern and responsive **portfolio website** built with **React + Vite, Tailwin
 
 ---
 
-## 📂 Folder Structure  
-
-portfolio/
-├── public/ # Static assets
-├── src/
-│ ├── assets/ # Images and icons
-│ ├── components/ # Reusable UI components
-│ ├── sections/ # About, Skills, Education, Projects, Experience, Footer, etc.
-│ ├── App.jsx # Main App component
-│ └── index.js # Entry point
-└── package.json
-
-
----
-
-## ⚙️ Installation & Setup  
+## ⚙️ Setup Locally 
 
 Run this project locally with:  
 
