@@ -8,7 +8,7 @@ const skillCategories = [
       "HTML5",
       "CSS3",
       "JavaScript",
-      "Tailwind CSS",
+      "Tailwind",
       "Bootstrap",
       "React JS",
       "Redux",
@@ -17,7 +17,7 @@ const skillCategories = [
   },
   {
     title: "Backend",
-    skills: ["Node JS", "Express JS", "PostgreSQL", "MySQL", "MongoDB"],
+    skills: ["Node JS", "Express JS", "MongoDB", "PostgreSQL", "MySQL",],
   },
   {
     title: "Languages",
@@ -70,8 +70,8 @@ const Skills = () => {
               </h3>
             </div>
 
-            {/* Skills Grid (exact 4 per row) */}
-            <div className="grid grid-cols-4 gap-3 w-full">
+            {/* Skills Grid (exact 3 rows) */}
+            <div className="grid grid-cols-3 gap-4 w-full">
               {category.skills.map((skill, i) => (
                 <span
                   key={i}
