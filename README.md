@@ -15,8 +15,6 @@ Welcome! This is my personal portfolio website, showcasing my projects, skills, 
 
 ## ⚙️ Follow these steps to run the project locally:  
  
-
-```bash
 # 1. Clone the repository
 git clone https://github.com/D-moc/portfolio.git
 
