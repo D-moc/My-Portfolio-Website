@@ -1,6 +1,6 @@
 # 🌐 [My Portfolio Website](https://portfolio-virid-five-o7m0ubek71.vercel.app/)
 
-Welcome! This is my personal portfolio website, showcasing my projects, skills, and experience. Built with modern web technologies to provide a smooth and interactive user experience.  
+Welcome! This is my portfolio, showcasing my projects, skills, and experience. Built with modern web technologies to provide a smooth and interactive user experience.  
 
 ---
 
