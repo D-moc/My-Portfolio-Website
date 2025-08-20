@@ -32,4 +32,4 @@ npm run dev
 
 ## License
 
-This portfolio is licensed under the [MIT License](/LICENSE).
+This portfolio Website is licensed under the [MIT License](/LICENSE).
