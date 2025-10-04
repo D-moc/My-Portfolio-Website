@@ -13,11 +13,6 @@ Welcome! This is my portfolio, showcasing my projects, skills, and experience. B
 
 ---
 
-
-# 4. Start the development server
-npm run dev
-```
-
 ## License
 
 This portfolio Website is licensed under the [MIT License](/LICENSE).
