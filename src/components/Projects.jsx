@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import gyaanBhandarImg from "../assets/gyanbhandar.jpg";
-import vitalTripImg from "../assets/vitaltrip.jpeg";
+import vitalTripImg from "../assets/VitalTrip.jpg";
 import aiChatbotImg from "../assets/aichatbot.jpg";
 
 const projects = [
@@ -11,7 +11,7 @@ const projects = [
     description:
       "An online book store platform with search, categories, and secure checkout.",
     image: gyaanBhandarImg,
-    tags: ["React", "Node.js", "MongoDB",],
+    tags: ["React JS", "Bootstrap", "HTML5",],
     github: "https://github.com/D-moc/gyaan-bhandar",
     webapp: "https://gyaan-bhandar-demo.com",
   },
@@ -21,7 +21,7 @@ const projects = [
     description:
       "A trip planner that helps users create and organize travel itineraries with ease.",
     image: vitalTripImg,
-    tags: ["React", "Tailwind", "MongoDB"],
+    tags: ["React JS", "Tailwind CSS", "MongoDB",],
     github: "https://github.com/D-moc/vitaltrip",
     webapp: "https://vitaltrip-demo.com",
   },
@@ -31,7 +31,7 @@ const projects = [
     description:
       "An intelligent chatbot designed to answer questions and assist users in real-time.",
     image: aiChatbotImg,
-    tags: ["Python", "Flask"],
+    tags: ["Node JS", "Firebase", "Framer Motion"],
     github: "https://github.com/D-moc/ai-chatbot",
     webapp: "https://ai-chatbot-demo.com",
   },
@@ -83,7 +83,7 @@ const Projects = () => {
           <motion.div
             key={project.id}
             onClick={() => handleOpenModal(project)}
-            className="backdrop-blur-lg bg-white/5 border border-white/10 
+            className="backdrop-blur-lg bg-white/5 border-5 border-white/10 
                        rounded-2xl shadow-lg overflow-hidden cursor-pointer 
                        hover:shadow-amber-500/30 hover:-translate-y-2 
                        transition-transform duration-300"
@@ -96,7 +96,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover rounded-xl"
+                className="w-full h-48 object-fit rounded-xl"
               />
             </div>
             <div className="p-6">
@@ -111,7 +111,7 @@ const Projects = () => {
                   <span
                     key={index}
                     className="inline-block bg-amber-500/10 text-xs font-semibold 
-                               text-amber-400 rounded-full px-3 py-1 mr-2 mb-2"
+                               text-amber-400 rounded-full px-3 py-2 mr-2 mb-2"
                   >
                     {tag}
                   </span>
@@ -126,7 +126,7 @@ const Projects = () => {
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
           <div className="backdrop-blur-xl bg-white/5 border border-white/10 
-                          rounded-2xl shadow-2xl w-[95%] max-w-3xl overflow-hidden relative">
+                          rounded-2xl shadow-2xl w-[95%] max-w-3xl h-[85vh] overflow-hidden relative flex flex-col">
             <div className="flex justify-end p-4">
               <button
                 onClick={handleCloseModal}
@@ -136,15 +136,15 @@ const Projects = () => {
               </button>
             </div>
 
-            <div className="flex flex-col">
-              <div className="w-full flex justify-center px-4">
+            <div className="flex flex-col justify-center">
+              <div className="w-full flex justify-center px-4 h-[40%]">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-[95%] object-contain rounded-xl shadow-lg"
+                  className="w-[95%] h-full object-contain rounded-xl shadow-lg"
                 />
               </div>
-              <div className="p-6 lg:p-8">
+              <div className="p-6 lg:p-8 h-[60%] overflow-y-auto">
                 <h3 className="text-3xl font-bold text-amber-400 mb-4">
                   {selectedProject.title}
                 </h3>

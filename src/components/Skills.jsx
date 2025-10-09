@@ -12,7 +12,7 @@ const skillCategories = [
       "Bootstrap",
       "React JS",
       "Redux",
-      
+      "GSAP",
     ],
   },
   {
@@ -21,11 +21,11 @@ const skillCategories = [
   },
   {
     title: "Languages",
-    skills: ["JavaScript", "Python", "C++","C",  "Java"],
+    skills: ["JavaScript", "Python", "C++","C",],
   },
   {
     title: "Tools",
-    skills: ["Git", "GitHub", "Figma", "VS Code"],
+    skills: ["Git", "GitHub", "Figma", "VS Code",],
   },
 ];
 
@@ -58,7 +58,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="backdrop-blur-xl bg-white/5 border-2 border-white/20 
+            className="backdrop-blur-xl bg-white/5 border-5 border-white/20 
                        rounded-xl shadow-lg p-6 flex flex-col items-center 
                        hover:shadow-red-500/40 transition duration-300 
                        min-h-[300px] max-h-[300px]"
@@ -70,8 +70,8 @@ const Skills = () => {
               </h3>
             </div>
 
-            {/* Skills Grid (exact 3 rows) */}
-            <div className="grid grid-cols-3 gap-4 w-full">
+            {/* Skills Grid (exact 2 rows) */}
+            <div className="grid grid-cols-2 gap-4 w-full">
               {category.skills.map((skill, i) => (
                 <span
                   key={i}

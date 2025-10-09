@@ -12,7 +12,7 @@ const experiences = [
       "Mentored juniors in software and electronics projects.",
       "Improved team collaboration through knowledge-sharing sessions.",
     ],
-    skills: ["JavaScript", "React", "Leadership", "Team Management"],
+    skills: ["JavaScript", "React JS","Tailwind CSS"],
   },
   {
     role: "Hardware Team Member",
@@ -23,18 +23,7 @@ const experiences = [
       "Contributed to research papers and technical documentation.",
       "Implemented web scraping solutions for robotics data collection.",
     ],
-    skills: ["ROS2", "Python","Linux", "Web Scraping"],
-  },
-  {
-    role: "Web Development Intern",
-    company: "Prodigy Infotech",
-    period: "Jun 2024 – Aug 2024",
-    description: [
-      "Built small frontend projects to strengthen React skills.",
-      "Collaborated with mentors on real-world web development tasks.",
-      "Enhanced problem-solving and coding practices in a professional setup.",
-    ],
-    skills: ["React", "JavaScript", "Tailwind CSS", "Git/GitHub"],
+    skills: ["Python","Linux", "ROS2", "Web Scraping"],
   },
 ];
 

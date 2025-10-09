@@ -7,7 +7,7 @@ const educationData = [
     degree: "B.Tech in Electronics and Computer Engineering (EXCP)",
     institution: "K.J. Somaiya College of Engineering",
     duration: "2023 - 2027",
-    grade: "8.6 CGPA",
+    grade: "8.37 CGPA",
     description:
       "Pursuing my undergraduate degree with a focus on Electronics and Computer Engineering, gaining knowledge in hardware, software, and system design.",
   },
@@ -72,12 +72,12 @@ const Education = () => {
               >
                 {/* Card */}
                 <div
-                  className={`w-[95%] md:w-[48%] backdrop-blur-xl bg-white/10 border border-white/20 
+                  className={`w-[95%] md:w-[48%] backdrop-blur-xl bg-white/5 border-5 border-white/20 
                               rounded-xl shadow-lg p-8 relative z-10 hover:shadow-amber-500/40 
                               transition duration-300`}
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <FaGraduationCap className="text-amber-400 text-2xl" />
+                    <FaGraduationCap className="text-red-400 text-2xl" />
                     <h3 className="text-2xl font-semibold text-white">
                       {edu.degree}
                     </h3>
