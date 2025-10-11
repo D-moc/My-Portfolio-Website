@@ -33,7 +33,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 relative w-full
+      className="py-24 font-sans relative w-full
                  bg-gradient-to-r from-[#0a0f1c]/80 via-[#1e293b]/80 via-[#2c1810]/80 to-[#0d0d0d]/80"
     >
       {/* Inner container for padding */}

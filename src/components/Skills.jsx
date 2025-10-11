@@ -9,19 +9,18 @@ const skillCategories = [
       "CSS3",
       "JavaScript",
       "Tailwind",
-      "Bootstrap",
       "React JS",
-      "Redux",
+      "Framer Motion",
       "GSAP",
     ],
   },
   {
     title: "Backend",
-    skills: ["Node JS", "Express JS", "MongoDB", "PostgreSQL", "MySQL",],
+    skills: ["Node JS", "Express JS", "MongoDB", "PostgreSQL", ],
   },
   {
     title: "Languages",
-    skills: ["JavaScript", "Python", "C++","C",],
+    skills: ["Java", "Python", "JavaScript"],
   },
   {
     title: "Tools",
@@ -33,7 +32,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full py-20 px-[8vw] md:px-[6vw] lg:px-[12vw] font-sans relative 
+      className="w-full py-24 px-[8vw] md:px-[6vw] lg:px-[12vw] font-sans relative 
                  bg-gradient-to-r from-[#0a0f1c]/80 via-[#1e293b]/80 via-[#2c1810]/80 to-[#0d0d0d]/80"
     >
       {/* Section Title */}

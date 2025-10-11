@@ -2,6 +2,8 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import profileIcon from "../assets/image.jpg";
 import resumeFile from "../assets/resume.pdf";
+import Tilt from "react-parallax-tilt";
+
 
 function About() {
   const [text] = useTypewriter({
@@ -44,7 +46,7 @@ function About() {
           download="Dinesh_Resume.pdf"
           className="inline-block px-6 py-3 bg-gradient-to-r from-white-500 to-indigo-600 
                     hover:from-red-600 hover:to-indigo-700 
-                  rounded-full font-medium shadow-lg transition transform hover:scale-105 ml-0"
+                  rounded-lg font-medium shadow-lg transition transform hover:scale-105 ml-0"
         >
           Resume Here
         </a>
