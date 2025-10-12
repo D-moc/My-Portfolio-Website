@@ -1,17 +1,37 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import gyaanBhandarImg from "../assets/gyanbhandar.jpg";
-import vitalTripImg from "../assets/VitalTrip.jpg";
-import aiChatbotImg from "../assets/aichatbot.jpg";
+import { FaReact, FaBootstrap, FaHtml5, FaNodeJs, FaCss3Alt } from "react-icons/fa";
+import { SiTailwindcss, SiMongodb, SiFramer, SiJavascript, SiExpress } from "react-icons/si";
 
+import gyaanBhandaarImg from "../assets/gyanbhandaar.jpg";
+import vitalTripImg from "../assets/VitalTrip.jpg";
+import abhiyantrikiImg from "../assets/abhiyantrikiecesa.jpg";
+
+// 🔹 Tech icons mapping
+const techIcons = {
+  "React JS": <FaReact className="text-blue-400 text-2xl" />,
+  "Tailwind CSS": <SiTailwindcss className="text-cyan-400 text-2xl" />,
+  "Bootstrap": <FaBootstrap className="text-purple-500 text-2xl" />,
+  "HTML5": <FaHtml5 className="text-orange-500 text-2xl" />,
+  "CSS3": <FaCss3Alt className="text-blue-500 text-2xl" />,
+  "MongoDB": <SiMongodb className="text-green-500 text-2xl" />,
+  "Node JS": <FaNodeJs className="text-green-400 text-2xl" />,
+  "Framer Motion": <SiFramer className="text-pink-400 text-2xl" />,
+  "Express JS": <SiExpress className="text-gray-300 text-2xl" />,
+  "Typing effect": <SiFramer className="text-pink-400 text-2xl" />,
+  "Animation": <SiFramer className="text-purple-400 text-2xl" />,
+  "JavaScript": <SiJavascript className="text-yellow-400 text-2xl" />,
+};
+
+// 🔹 Project data
 const projects = [
   {
     id: 1,
-    title: "Gyaan Bhandar",
+    title: "Gyaan Bhandaar",
     description:
-      "An online book store platform with search, categories, and secure checkout.",
-    image: gyaanBhandarImg,
-    tags: ["React JS", "Bootstrap", "HTML5",],
+      "A MERN stack eBook platform for browsing, searching, and purchasing digital books seamlessly.",
+    image: gyaanBhandaarImg,
+    tags: ["MongoDB", "Express JS", "React JS", "Node JS"],
     github: "https://github.com/D-moc/gyaan-bhandar",
     webapp: "https://gyaan-bhandar-demo.com",
   },
@@ -19,34 +39,29 @@ const projects = [
     id: 2,
     title: "VitalTrip",
     description:
-      "A trip planner that helps users create and organize travel itineraries with ease.",
+      "VitalTrip is a dynamic travel planning web app that helps users organize trips, manage itineraries, and discover destinations.",
     image: vitalTripImg,
-    tags: ["React JS", "Tailwind CSS", "MongoDB",],
-    github: "https://github.com/D-moc/vitaltrip",
+    tags: ["MongoDB", "Express JS", "React JS", "Node JS"],
+    github: "https://github.com/D-moc/VitalTrip.git",
     webapp: "https://vitaltrip-demo.com",
   },
   {
     id: 3,
-    title: "AI Chatbot",
+    title: "E-cesa Events",
     description:
-      "An intelligent chatbot designed to answer questions and assist users in real-time.",
-    image: aiChatbotImg,
-    tags: ["Node JS", "Firebase", "Framer Motion"],
-    github: "https://github.com/D-moc/ai-chatbot",
-    webapp: "https://ai-chatbot-demo.com",
+      "E-cesa Events is an official college fest website designed to showcase events, competitions, and schedules interactively.",
+    image: abhiyantrikiImg,
+    tags: ["Tailwind CSS", "JavaScript", "React JS", "Typing effect"],
+    github: "https://github.com/D-moc/E-CESA-Abhiyantriki-Website.git",
+    webapp: "https://e-cesa-abhiyantriki-website.vercel.app/",
   },
 ];
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleOpenModal = (project) => {
-    setSelectedProject(project);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProject(null);
-  };
+  const handleOpenModal = (project) => setSelectedProject(project);
+  const handleCloseModal = () => setSelectedProject(null);
 
   return (
     <section
@@ -66,7 +81,7 @@ const Projects = () => {
         </p>
       </div>
 
-      {/* Projects Grid with Motion */}
+      {/* Projects Grid */}
       <motion.div
         className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         initial="hidden"
@@ -74,47 +89,52 @@ const Projects = () => {
         viewport={{ once: true, amount: 0.2 }}
         variants={{
           hidden: {},
-          show: {
-            transition: { staggerChildren: 0.2 },
-          },
+          show: { transition: { staggerChildren: 0.2 } },
         }}
       >
         {projects.map((project) => (
           <motion.div
             key={project.id}
             onClick={() => handleOpenModal(project)}
-            className="backdrop-blur-lg bg-white/5 border-5 border-white/10 
-                       rounded-2xl shadow-lg overflow-hidden cursor-pointer 
-                       hover:shadow-amber-500/30 hover:-translate-y-2 
-                       transition-transform duration-300"
+            className="bg-[#121826]/95 border-[3px] border-white/20 
+                       rounded-2xl shadow-2xl overflow-hidden cursor-pointer 
+                       hover:shadow-amber-500/30 hover:border-amber-400/50 
+                       hover:-translate-y-2 transition-all duration-300"
             variants={{
               hidden: { opacity: 0, y: 50 },
-              show: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } },
+              show: { opacity: 1, y: 0, transition: { type: 'spring', duration: 0.8 } },
             }}
           >
             <div className="p-4">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-fit rounded-xl"
+                className="w-full h-48 object-cover rounded-xl"
               />
             </div>
+
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-white mb-2">
+              {/* Title */}
+              <h3 className="text-2xl font-bold italic text-white mb-3 text-center">
                 {project.title}
               </h3>
-              <p className="text-gray-400 mb-4 pt-2 line-clamp-3">
+
+              {/* Description */}
+              <p className="text-gray-400 mb-6 text-center leading-relaxed">
                 {project.description}
               </p>
-              <div className="mb-2">
+
+              {/* Tech Stack Icons - smaller and centered */}
+              <div className="flex justify-center flex-wrap gap-3 select-none pointer-events-none">
                 {project.tags.map((tag, index) => (
-                  <span
+                  <div
                     key={index}
-                    className="inline-block bg-amber-500/10 text-xs font-semibold 
-                               text-amber-400 rounded-full px-3 py-2 mr-2 mb-2"
+                    className="flex items-center justify-center bg-amber-500/10 
+                               rounded-lg w-10 h-10 border border-white/20"
+                    title={tag}
                   >
-                    {tag}
-                  </span>
+                    {techIcons[tag] || <SiJavascript className="text-yellow-400 text-2xl" />}
+                  </div>
                 ))}
               </div>
             </div>
@@ -125,7 +145,7 @@ const Projects = () => {
       {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
-          <div className="backdrop-blur-xl bg-white/5 border border-white/10 
+          <div className="backdrop-blur-xl bg-[#121826]/95 border-[3px] border-white/20 
                           rounded-2xl shadow-2xl w-[95%] max-w-3xl h-[85vh] overflow-hidden relative flex flex-col">
             <div className="flex justify-end p-4">
               <button
@@ -144,24 +164,29 @@ const Projects = () => {
                   className="w-[95%] h-full object-contain rounded-xl shadow-lg"
                 />
               </div>
+
               <div className="p-6 lg:p-8 h-[60%] overflow-y-auto">
-                <h3 className="text-3xl font-bold text-amber-400 mb-4">
+                <h3 className="text-3xl font-bold italic text-amber-400 mb-4 text-center">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6 leading-relaxed text-center">
                   {selectedProject.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+
+                {/* Icons in Modal */}
+                <div className="flex justify-center flex-wrap gap-3 mb-6 select-none pointer-events-none">
                   {selectedProject.tags.map((tag, index) => (
-                    <span
+                    <div
                       key={index}
-                      className="bg-amber-500/10 text-xs font-semibold 
-                                 text-amber-400 rounded-full px-3 py-1"
+                      className="flex items-center justify-center bg-amber-500/10 
+                                 rounded-lg w-10 h-10 border border-white/20"
+                      title={tag}
                     >
-                      {tag}
-                    </span>
+                      {techIcons[tag] || <SiJavascript className="text-yellow-400 text-2xl" />}
+                    </div>
                   ))}
                 </div>
+
                 <div className="flex gap-4">
                   <a
                     href={selectedProject.github}

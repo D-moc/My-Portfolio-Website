@@ -1,6 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase, FaReact, FaPython, FaLinux } from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiExpress,
+  SiJavascript,
+  SiRos,
+  SiWebstorm,
+} from "react-icons/si";
+
+// 🔹 Skills icons mapping
+const skillIcons = {
+  "JavaScript": <SiJavascript className="text-yellow-400 text-sm" />,
+  "React JS": <FaReact className="text-blue-400 text-sm" />,
+  "Tailwind CSS": <SiTailwindcss className="text-cyan-400 text-sm" />,
+  "Python": <FaPython className="text-green-400 text-sm" />,
+  "Linux": <FaLinux className="text-gray-300 text-sm" />,
+  "ROS2": <SiRos className="text-pink-400 text-sm" />,
+  "Express": <SiExpress className="text-gray-300 text-sm" />,
+  "Web Scraping": <SiWebstorm className="text-sky-400 text-sm" />,
+};
 
 const experiences = [
   {
@@ -12,7 +31,7 @@ const experiences = [
       "Mentored juniors in software and electronics projects.",
       "Improved team collaboration through knowledge-sharing sessions.",
     ],
-    skills: ["JavaScript", "React JS","Tailwind CSS"],
+    skills: ["JavaScript", "React JS", "Express", "Tailwind CSS"],
   },
   {
     role: "Hardware Team Member",
@@ -23,7 +42,7 @@ const experiences = [
       "Contributed to research papers and technical documentation.",
       "Implemented web scraping solutions for robotics data collection.",
     ],
-    skills: ["Python","Linux", "ROS2", "Web Scraping"],
+    skills: ["Python", "Linux", "ROS2", "Web Scraping"],
   },
 ];
 
@@ -31,7 +50,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full min-h-screen px-[8vw] md:px-[6vw] lg:px-[12vw] py-24  font-sans
+      className="w-full min-h-screen px-[8vw] md:px-[6vw] lg:px-[12vw] py-24 font-sans
                  relative bg-gradient-to-r from-[#0a0f1c]/80 via-[#1e293b]/80 via-[#2c1810]/80 to-[#0d0d0d]/80"
     >
       {/* Title */}
@@ -85,9 +104,7 @@ const Experience = () => {
                             group-hover:shadow-amber-500/40 transition-all duration-300"
             >
               <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
-              <p className="text-lg font-semibold text-red-400">
-                {exp.company}
-              </p>
+              <p className="text-lg font-semibold text-red-400">{exp.company}</p>
               <span className="text-sm text-gray-400 italic">{exp.period}</span>
 
               {/* Bullet Points */}
@@ -102,9 +119,13 @@ const Experience = () => {
                 {exp.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="bg-amber-500/10 text-amber-400 text-xs font-semibold 
-                               px-3 py-1 rounded-full"
+                    className="flex items-center gap-2 bg-amber-500/10 
+                               text-amber-400 text-xs font-semibold 
+                               px-3 py-1 rounded-full border border-amber-500/20"
                   >
+                    {skillIcons[skill] || (
+                      <SiJavascript className="text-yellow-400 text-sm" />
+                    )}
                     {skill}
                   </span>
                 ))}
