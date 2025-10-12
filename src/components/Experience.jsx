@@ -1,23 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBriefcase, FaReact, FaPython, FaLinux } from "react-icons/fa";
+import { FaReact, FaPython, FaLinux } from "react-icons/fa";
 import {
   SiTailwindcss,
-  SiExpress,
-  SiJavascript,
   SiRos,
+  SiExpress,
   SiWebstorm,
+  SiJavascript,
 } from "react-icons/si";
 
-// 🔹 Skills icons mapping
+import ecesa from "../assets/ecesa.jpg";
+import tmrt from "../assets/tmrt.jpg";
+
 const skillIcons = {
-  "JavaScript": <SiJavascript className="text-yellow-400 text-sm" />,
-  "React JS": <FaReact className="text-blue-400 text-sm" />,
-  "Tailwind CSS": <SiTailwindcss className="text-cyan-400 text-sm" />,
-  "Python": <FaPython className="text-green-400 text-sm" />,
-  "Linux": <FaLinux className="text-gray-300 text-sm" />,
-  "ROS2": <SiRos className="text-pink-400 text-sm" />,
-  "Express": <SiExpress className="text-gray-300 text-sm" />,
+  JavaScript: <SiJavascript className="text-yellow-400 text-sm" />,
+  React: <FaReact className="text-blue-400 text-sm" />,
+  Tailwind: <SiTailwindcss className="text-cyan-400 text-sm" />,
+  Python: <FaPython className="text-green-400 text-sm" />,
+  Linux: <FaLinux className="text-gray-300 text-sm" />,
+  ROS2: <SiRos className="text-pink-400 text-sm" />,
+  Express: <SiExpress className="text-gray-300 text-sm" />,
   "Web Scraping": <SiWebstorm className="text-sky-400 text-sm" />,
 };
 
@@ -31,7 +33,8 @@ const experiences = [
       "Mentored juniors in software and electronics projects.",
       "Improved team collaboration through knowledge-sharing sessions.",
     ],
-    skills: ["JavaScript", "React JS", "Express", "Tailwind CSS"],
+    skills: ["JavaScript", "React", "Express", "Tailwind"],
+    image: ecesa,
   },
   {
     role: "Hardware Team Member",
@@ -43,6 +46,7 @@ const experiences = [
       "Implemented web scraping solutions for robotics data collection.",
     ],
     skills: ["Python", "Linux", "ROS2", "Web Scraping"],
+    image: tmrt,
   },
 ];
 
@@ -50,8 +54,8 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full min-h-screen px-[8vw] md:px-[6vw] lg:px-[12vw] py-24 font-sans
-                 relative bg-gradient-to-r from-[#0a0f1c]/80 via-[#1e293b]/80 via-[#2c1810]/80 to-[#0d0d0d]/80"
+      className="w-full min-h-screen px-[8vw] md:px-[6vw] lg:px-[12vw] py-24 font-sans 
+      relative bg-gradient-to-r from-[#0a0f1c]/80 via-[#1e293b]/80 via-[#2c1810]/80 to-[#0d0d0d]/80"
     >
       {/* Title */}
       <motion.div
@@ -59,7 +63,7 @@ const Experience = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="flex flex-col items-center justify-center gap-4 mb-16"
+        className="flex flex-col items-center justify-center gap-4 mb-20"
       >
         <div className="flex items-center justify-center gap-4 w-full">
           <span className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent animate-pulse"></span>
@@ -68,71 +72,97 @@ const Experience = () => {
           </h2>
           <span className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent animate-pulse"></span>
         </div>
-
-        {/* Subtitle */}
         <p className="text-gray-300 mt-4 text-lg font-medium max-w-3xl text-center">
           A journey of learning and impact across multiple organizations.
         </p>
       </motion.div>
 
       {/* Timeline */}
-      <div className="relative max-w-4xl mx-auto border-l-2 border-amber-500/40 pl-6 sm:pl-8">
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            whileHover={{ scale: 1.05, x: index % 2 === 0 ? 10 : -10 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
-            className="mb-12 sm:mb-16 relative group cursor-pointer"
-          >
-            {/* Icon */}
-            <span
-              className="absolute -left-[26px] sm:-left-[34px] 
-                             bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 
-                             text-gray-950 p-2 rounded-full shadow-lg shadow-amber-500/40 
-                             group-hover:scale-125 transition-transform duration-300"
-            >
-              <FaBriefcase className="text-sm sm:text-base" />
-            </span>
+      <div className="relative max-w-5xl mx-auto">
+        {/* Rope (Timeline Line) */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-[3px] h-full bg-gradient-to-b from-amber-200 via-amber-200/80 to-transparent rounded-full " />
 
-            {/* Content */}
+        {experiences.map((exp, index) => {
+          const isLeft = index % 2 === 0;
+
+          return (
             <div
-              className="p-5 sm:p-7 rounded-lg border border-amber-500/30 
-                            bg-gray-900/60 shadow-lg shadow-amber-500/10 
-                            group-hover:shadow-amber-500/40 transition-all duration-300"
+              key={index}
+              className={`relative mb-24 flex flex-col sm:flex-row items-center ${
+                isLeft ? "sm:justify-start" : "sm:justify-end"
+              }`}
             >
-              <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
-              <p className="text-lg font-semibold text-red-400">{exp.company}</p>
-              <span className="text-sm text-gray-400 italic">{exp.period}</span>
-
-              {/* Bullet Points */}
-              <ul className="mt-4 list-disc list-inside space-y-2 text-gray-300 text-base leading-relaxed">
-                {exp.description.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-
-              {/* Skills */}
-              <div className="mt-4 flex flex-wrap gap-2">
-                {exp.skills.map((skill, i) => (
-                  <span
-                    key={i}
-                    className="flex items-center gap-2 bg-amber-500/10 
-                               text-amber-400 text-xs font-semibold 
-                               px-3 py-1 rounded-full border border-amber-500/20"
+              {/* Card Animation Only */}
+              <motion.div
+                initial={{ opacity: 0, x: isLeft ? -80 : 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className={`w-full sm:w-[48%] ${
+                  isLeft ? "sm:pr-12 sm:text-left" : "sm:pl-12 sm:text-left"
+                }`}
+              >
+                <div
+                  className="relative p-7 sm:p-8 rounded-lg border border-amber-500/30 
+                  bg-[#0a0f1c]/90 shadow-[0_0_25px_rgba(255,193,7,0.12)] 
+                  hover:shadow-[0_0_30px_rgba(255,193,7,0.25)] 
+                  transition-all duration-300 text-gray-200"
+                >
+                  {/* Period Badge */}
+                  <div
+                    className={`absolute top-0 ${
+                      isLeft
+                        ? "right-0 rounded-bl-lg"
+                        : "left-0 rounded-br-lg"
+                    } bg-amber-600/30 text-amber-300 text-xs font-semibold px-3 py-1`}
                   >
-                    {skillIcons[skill] || (
-                      <SiJavascript className="text-yellow-400 text-sm" />
-                    )}
-                    {skill}
-                  </span>
-                ))}
+                    {exp.period}
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white mb-1">
+                    {exp.role}
+                  </h3>
+                  <p className="text-lg font-semibold text-amber-400 mb-4">
+                    {exp.company}
+                  </p>
+
+                  {/* Bullet Points aligned left */}
+                  <ul className="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed">
+                    {exp.description.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+
+                  {/* Skills */}
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {exp.skills.map((skill, i) => (
+                      <span
+                        key={i}
+                        className="flex items-center gap-1 bg-amber-500/10 
+                        text-amber-400 text-xs font-semibold px-3 py-2 rounded-sm 
+                        border border-amber-500/20 shadow-sm shadow-amber-400/10"
+                      >
+                        {skillIcons[skill] || (
+                          <SiJavascript className="text-yellow-400 text-sm" />
+                        )}
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Static Image Node on the Rope */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full bg-amber-200 shadow-[0_0_20px_rgba(255,200,0,0.7)] flex items-center justify-center overflow-hidden border-2 border-amber-200">
+                <img
+                  src={exp.image}
+                  alt="role-icon"
+                  className="object-cover w-full h-full"
+                />
               </div>
             </div>
-          </motion.div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
