@@ -43,7 +43,7 @@ const projects = [
     image: vitalTripImg,
     tags: ["MongoDB", "Express JS", "React JS", "Node JS"],
     github: "https://github.com/D-moc/VitalTrip.git",
-    webapp: "https://vitaltrip-demo.com",
+    webapp: "https://vital-trip-h57z-ej21p1154-d-mocs-projects.vercel.app/",
   },
   {
     id: 3,
