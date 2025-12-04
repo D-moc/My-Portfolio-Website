@@ -33,11 +33,11 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 font-sans relative w-full
+      className="py-24 relative w-full
                  bg-gradient-to-r from-[#0a0f1c]/80 via-[#1e293b]/80 via-[#2c1810]/80 to-[#0d0d0d]/80"
     >
       {/* Inner container for padding */}
-      <div className="px-[8vw] md:px-[6vw] lg:px-[12vw] font-sans">
+      <div className="px-[8vw] md:px-[6vw] lg:px-[12vw] ">
         {/* Title */}
         <div className="flex flex-col items-center mb-16">
           <div className="flex items-center w-full justify-center gap-6">

@@ -7,7 +7,7 @@ import Tilt from "react-parallax-tilt";
 
 function About() {
   const [text] = useTypewriter({
-    words: ["Frontend Developer", "Aspiring Full Stack Developer"],
+    words: ["Frontend Developer","Backend Developer", "Aspiring Full Stack Developer"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -17,7 +17,7 @@ function About() {
       id="about"
       className="w-full min-h-screen pt-28 flex flex-col-reverse md:flex-row 
                  items-center justify-center gap-12 px-4 sm:px-6 md:px-12 lg:px-16 
-                 bg-gradient-to-r from-[#0a0f1c]/80 via-[#1e293b]/80 via-[#2c1810]/80 to-[#0d0d0d]/80 
+                 bg-gradient-to-r from-[#0a0f1c]/80 via-[#2c1810]/80 to-[#0d0d0d]/80 
                  text-white overflow-hidden"
     >
       {/* Left Side - Text Content */}

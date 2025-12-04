@@ -54,8 +54,8 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full min-h-screen px-[8vw] md:px-[6vw] lg:px-[12vw] py-24 font-sans 
-      relative bg-gradient-to-r from-[#0a0f1c]/80 via-[#1e293b]/80 via-[#2c1810]/80 to-[#0d0d0d]/80"
+      className="w-full min-h-screen px-[8vw] md:px-[6vw] lg:px-[12vw] py-24 
+      relative bg-gradient-to-r from-[#0a0f1c]/80 via-[#2c1810]/80 to-[#0d0d0d]/80"
     >
       {/* Title */}
       <motion.div
@@ -139,7 +139,7 @@ const Experience = () => {
                       <span
                         key={i}
                         className="flex items-center gap-1 bg-amber-500/10 
-                        text-amber-400 text-xs font-semibold px-3 py-2 rounded-sm 
+                        text-amber-400 text-xs font-semibold px-2 py-2 rounded-sm 
                         border border-amber-500/20 shadow-sm shadow-amber-400/10"
                       >
                         {skillIcons[skill] || (

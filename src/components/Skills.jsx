@@ -42,7 +42,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full py-24 px-[8vw] md:px-[6vw] lg:px-[12vw] font-sans relative 
+      className="w-full py-24 px-[8vw] md:px-[6vw] lg:px-[12vw]  relative 
                  overflow-hidden bg-gradient-to-r from-[#0a0f1c]/80 via-[#2c1810]/80 to-[#0d0d0d]/80"
     >
       {/* Section Title */}

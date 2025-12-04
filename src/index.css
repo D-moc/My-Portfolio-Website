@@ -5,4 +5,5 @@ body {
   padding: 0;
   overflow-x: hidden; /* stops whitespace on initial render */
   width: 100%;
+  font-family: Georgia, "Times New Roman", serif;
 }
