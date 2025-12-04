@@ -9,7 +9,7 @@ import {
   SiJavascript,
 } from "react-icons/si";
 
-import ecesa from "../assets/ecesa.jpg";
+import ecesa from "../assets/ecesa.png";
 import tmrt from "../assets/tmrt.jpg";
 
 const skillIcons = {
