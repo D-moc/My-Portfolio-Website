@@ -53,7 +53,7 @@ const Skills = () => {
           <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
         </div>
         <p className="text-gray-300 mt-6 text-lg font-medium max-w-3xl text-center">
-          A dynamic showcase of my technical toolkit — constantly growing and evolving.
+          A dynamic display of my technical toolkit, continuously growing and evolving.
         </p>
       </div>
 
